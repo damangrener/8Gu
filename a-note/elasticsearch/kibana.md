@@ -1,0 +1,4 @@
+958  ./elasticsearch-create-enrollment-token -s kibana
+959  ./elasticsearch-reset-password -u kibana
+960  ./elasticsearch-reset-password -u kibana_system -i 123456
+eyJ2ZXIiOiI4LjEuMyIsImFkciI6WyIxMC4wLjAuMTo5MjAwIiwiMTkyLjE2OC4zMy4xNTE6OTIwMCJdLCJmZ3IiOiJjYTk2NzAzNWVlNzk2NmZjODViYzU5YjEyNjZlZGI4ODNhY2I0MmU0ZmI2MDk0YzdlNGU5N2FkZWNjNWFmNDY2Iiwia2V5IjoiTFNtU2Nva0JYMElNdl91UXpQYWk6QmVVSVdhVEJSN3VCV05YTFpsRVVSdyJ9
