@@ -76,7 +76,7 @@ class HelloWorldController {
 自动配置是一种机制，根据应用程序的classpath（程序运行时能够搜索到的类文件和资源文件的路径集合）、
 所使用的依赖和配置文件等信息，自动的配置Spring应用程序的各种组件和功能。
   
-基于条件话配置，根据特定条件来决定是否应用某项配置。  
+基于条件化配置，根据特定条件来决定是否应用某项配置。  
 @ConditionalOnClass、@ConditionalOnBean、@ConditionalOnProperty等，开发者可以利用这些条件注解来定义自己的配置条件。
 #### 关闭覆盖自动配置
 + 禁用特定的自动配置类
@@ -94,7 +94,7 @@ class HelloWorldController {
 + 性能优化
   + 自动配置可能带来性能开销
 + 测试目的
-  + 单元测试或继承成测试是，需要模拟特定的场景或环境，禁用可以使测试更加灵活
+  + 单元测试或集成测试时，需要模拟特定的场景或环境，禁用可以使测试更加灵活
 #### 自定义配置
 `@ConditionalOnClass`、`@ConditionalOnBean`、`@ConditionalOnProperty`等条件注解是Spring Boot中常用的条件化配置注解，开发者可以利用它们来定义自己的配置条件，根据特定的条件来决定是否应用某项配置。
 
@@ -208,3 +208,11 @@ myapp.service.type=advanced
 4. 启动内嵌的web服务器
 5. 加载其他资源
 6. 执行应用程序的业务逻辑
+
+### SB时如何实现自动装配的
++ @SpringBootApplication
+  + @SpringBootConfiguration
+    + @Configuration：允许在上下文中注册额外的bean或导入其他配置类
+  + @EnableAutoConfiguration：启用SB的自动配置机制
+    + @Import(AutoConfigurationImportSelector.class)
+  + @ComponentScan：扫描被@Component等注解的bean，默认扫描启动类所在包下的所有类
