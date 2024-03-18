@@ -43,3 +43,11 @@
 
 ### 排行榜
 Sorted Set
+```java
+jedis.zrangeWithScores("like_num", 0, 10);
+```
+
+### 持久化
++ 快照 RDB
++ 只追加文件 AOP append-only file
++ RDB和AOF混合持久化 （4.0新增）

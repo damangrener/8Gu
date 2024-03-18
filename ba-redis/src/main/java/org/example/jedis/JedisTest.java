@@ -3,6 +3,7 @@ package org.example.jedis;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.resps.Tuple;
 
 import java.util.HashMap;
 import java.util.List;
@@ -43,10 +44,18 @@ public class JedisTest {
             jedis.zadd("like_num",Math.random(),"aaa");
             jedis.zadd("like_num",Math.random(),"aaaa");
             jedis.zadd("like_num",Math.random(),"aaaaa");
+            jedis.zadd("like_num",10,"b");
 
             List<String> likeNum = jedis.zrange("like_num", 0, 2);
             for (String s : likeNum) {
                 System.out.println(s);
+            }
+
+            System.out.println("--");
+            List<Tuple> likeNum1 = jedis.zrangeWithScores("like_num", 0, 10);
+            for (Tuple s : likeNum1) {
+                System.out.print(s+" "+s.getElement()+" "+s.getScore());
+                System.out.println();
             }
         }
     }
