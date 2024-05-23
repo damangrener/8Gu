@@ -51,3 +51,7 @@ jedis.zrangeWithScores("like_num", 0, 10);
 + 快照 RDB
 + 只追加文件 AOP append-only file
 + RDB和AOF混合持久化 （4.0新增）
+
+### Redis单线程还是多线程
++ 单线程：
+  + 一开始，使用的是单线程模型，因为redis是一个基于内存的数据库，将所有的数据放入内存，所以
