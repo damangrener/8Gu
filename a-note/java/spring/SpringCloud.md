@@ -36,3 +36,11 @@ public class UserServiceFallback implements UserServiceClient {
 ```
 6. ribbon
 负载均衡和容错。
+
+### eureka和nacos的区别
++ eureka提供服务发现和注册
++ nacos提供服务发现、配置管理和动态dns，支持配置的实时刷新
+  + 使用@RefreshScope注解配置变化实时刷新
+  + 当服务实例的IP地址或端口号变化是，nacos客户端会自动将新的信息更新到Nacos服务器上，从而市其他服务能够正确的发现并调用该服务。
+
+
