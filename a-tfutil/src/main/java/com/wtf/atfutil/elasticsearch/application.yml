@@ -1,0 +1,11 @@
+elasticsearch:
+#  ip: 192.168.50.99
+  ip: 192.168.50.151
+  port: 9200
+  connect_mode: HTTP_SUPERUSER  #es连接模式
+  #日志类型:不记录日志none,查询_search,更新_update,多个,分割,就是es语句的前缀
+  logType: _search
+  #超级用户名elastic，不可更改
+  superuser:
+    name: elastic
+    password: 123456

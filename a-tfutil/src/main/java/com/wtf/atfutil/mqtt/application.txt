@@ -1,0 +1,20 @@
+spring:
+  mqtt:
+    client:
+      username: pno
+      password: pno
+      serverURIs: tcp://192.168.50.152:1883 # 客户端地址，多个使用逗号隔开
+#      serverURIs: tcp://192.168.50.99:1883
+      clientId: client0002 # ${random.value}
+      keepAliveInterval: 30
+      connectionTimeout: 5
+      topic: defaultTopic
+    producer:
+      defaultQos: 1
+      defaultRetained: true
+      defaultTopic: center
+    consumer:
+      defaultQos: 1
+      completionTimeout: 30000
+      consumerTopics: 7000 # 监听的 topic，多个使用逗号隔开
+      centerTopic: 7000

@@ -1,0 +1,5 @@
+org/apache/dolphinscheduler/plugin/task/zt/cod/ZtCodTaskChannelFactory.class
+org/apache/dolphinscheduler/plugin/task/zt/cod/ZtCodTask.class
+org/apache/dolphinscheduler/plugin/task/zt/cod/ZtCodTaskChannel.class
+META-INF/services/org.apache.dolphinscheduler.plugin.task.api.TaskChannelFactory
+org/apache/dolphinscheduler/plugin/task/zt/cod/ZtCodParameters.class
